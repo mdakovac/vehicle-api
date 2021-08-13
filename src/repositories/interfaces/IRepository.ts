@@ -7,6 +7,7 @@ export interface IRepository {
         rpp: number,
         page: number
     ): Promise<T[]>;
+    findOne<T>(model: unknown, findParams: unknown): Promise<T>;
     get<T>(model: unknown, id: string): Promise<T>;
     create<T>(model: unknown, doc: T): Promise<T>;
     delete(model: unknown, id: string): Promise<boolean>;

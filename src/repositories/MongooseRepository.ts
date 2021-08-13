@@ -45,6 +45,13 @@ export class MongooseRepository implements IRepository {
             .limit(rpp);
     };
 
+    findOne = async <T>(
+        model: mongoose.Model<any>,
+        findParams: any
+    ): Promise<T> => {
+        return model.findOne(findParams);
+    };
+
     get = async <T>(model: mongoose.Model<any>, id: string): Promise<T> => {
         return model.findById(mongoose.Types.ObjectId(id));
     };
