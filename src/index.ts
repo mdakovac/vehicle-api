@@ -5,6 +5,7 @@ import { IRepository } from "./repositories/interfaces/IRepository";
 import { ILoggerService } from "./services/interfaces/ILoggerService";
 import { TYPES } from "./types";
 import router from "./api/routers";
+import cors from "cors";
 
 const repository = container.get<IRepository>(TYPES.Repository);
 repository.connect();
@@ -12,6 +13,11 @@ repository.connect();
 const logger = container.get<ILoggerService>(TYPES.Logger);
 const app = express();
 
+app.use(
+    cors({
+        origin: "http://localhost:4200",
+    })
+);
 app.use(express.json());
 app.use(router);
 
