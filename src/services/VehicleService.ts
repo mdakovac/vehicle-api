@@ -27,7 +27,7 @@ export class VehicleService implements IVehicleService {
                     { year: toNumber(query) || undefined },
                 ],
             },
-            { make: 1, model: 1, year: 1 },
+            { make: 1, model: 1, year: 1, _id: 1 },
             page,
             rpp
         );

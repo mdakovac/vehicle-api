@@ -41,7 +41,7 @@ export class MongooseRepository implements IRepository {
         return model
             .find(findParams)
             .sort(sortParams)
-            .skip((page - 1) * page)
+            .skip((page - 1) * rpp)
             .limit(rpp);
     };
 
