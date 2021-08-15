@@ -4,7 +4,7 @@ import vehicleRouter from "./vehicleRouter";
 
 const router = Router();
 
-router.use("/vehicles", vehicleRouter);
+router.use("/vehicle", vehicleRouter);
 router.use("/auth", authRouter);
 
 export default router;

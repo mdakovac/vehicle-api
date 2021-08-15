@@ -35,4 +35,8 @@ export class AuthService implements IAuthService {
             this._jwtKey
         );
     };
+
+    verifyToken = (token: string): string | jwt.JwtPayload => {
+        return jwt.verify(token, this._jwtKey);
+    };
 }
