@@ -11,12 +11,14 @@ const VehicleSchema: Schema = new Schema({
         type: String,
         trim: true,
         required: true,
+        uppercase: true,
         maxlength: 50,
     },
     model: {
         type: String,
         trim: true,
         required: true,
+        uppercase: true,
         maxlength: 50,
     },
     year: {
