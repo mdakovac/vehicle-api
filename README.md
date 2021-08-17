@@ -1,7 +1,7 @@
 How to run:
 1. npm install
 2. npm start
-3. 
+
 
 Backend written in Nodejs, Express & MongoDb using Typescript. 
 
